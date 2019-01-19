@@ -4,11 +4,16 @@
 \alias{RtoSAGA}
 \title{Saves R objects to temporary files for processing by SAGA-GIS.}
 \usage{
-RtoSAGA(param)
+RtoSAGA(param, ext)
 }
 \arguments{
 \item{param}{A single variable that may be a raster object, sp object, sf
 object or dataframe}
+
+\item{ext}{character, file extension to use for vector data
+For SAGA versions < 7.0.0, this should be '.shp', while for newer
+SAGA versions the geopackage format ('gpkg') is used to preserve field
+names longer than 7 characters}
 }
 \value{
 character. Character string of filename of saved object
